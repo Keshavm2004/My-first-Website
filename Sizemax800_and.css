@@ -1,0 +1,333 @@
+::-webkit-scrollbar{
+    display: none;
+}
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: scroll;   
+}
+
+/* CSS variables */
+:root{
+    --Navbar-height:50px;
+}
+
+/* Navigation bar */
+#Navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    position: absolute;
+    /* z-index: 0; */
+}
+
+/* Navigation bar : Logo and image */
+
+#mylogo{
+    margin: 10px 35px;
+    z-index: 2;
+    opacity: 1;
+}
+#mylogo img{
+    height: 60px;
+    margin: 3px;
+    
+}
+
+/* Navigation bar : List */
+
+
+#Navbar::before{
+    content: '';
+    background-color: rgb(31, 29, 29);
+    position: absolute;
+    overflow: visible;
+    z-index: 2;
+    opacity: .6;
+    top: 0%;
+    left: 0px;
+    height: 100%;
+    width: 100vw;
+}
+
+#Navbar ul{
+    z-index: 2;
+    opacity: 1;
+    display: flex;
+}
+
+#Navbar ul li{
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+#Navbar ul li a{
+    display: block;
+    padding: 5px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    /* opacity: 1; */
+}
+
+#Navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Section : Home */
+
+#home{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 507px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: '';
+    position: absolute;
+    background: url("images (1).jpeg") no-repeat center center/cover;
+    background-size: 100vw 1000px;
+    z-index: 1;
+    height: 513px;
+    opacity: 0.6;
+    width: 100%;
+}
+
+/* Section : Services */
+
+#services-cont{
+    background-color: rgb(236, 88, 113);
+}
+
+#services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9b7ada;
+}
+
+#services .box{
+    display: grid;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin: 1%;
+    height: fit-content;
+    padding: 1%;
+    width: 90vw;
+    background-color: pink;
+}
+
+#services .box img{
+    height: 20vw;
+    width: 40%;
+    border-radius: 50px;
+    margin: auto;
+}
+
+#services .box p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* Section : Clients */
+#client-section{
+    height: 300px;
+    background-color: orangered;
+}
+
+#client-section::before{
+    content: '';
+    position: absolute;
+    /* background: url("contact.jpg") no-repeat center center/cover; */
+    /* background-size: 100vw 1000px; */
+    z-index: -1;
+    /* opacity: 1; */
+    
+}
+
+#clients{
+    display: flex;
+}
+
+#clients img{
+
+    height: 90%;
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;    
+    /* border: 3px solid green; */
+    padding: 10px;
+    display: block;
+    border-radius: 25px;
+}
+
+#clients .box{
+    width: 40vw;
+    height: 200px;
+    margin: 5px;
+    border: 3px solid white;
+    background-color: #9b7ada;
+}
+
+
+/* Section : contact us */
+#contact{
+    z-index: 2;    
+    /* padding: 4px; */
+    height: 100%;
+    position: relative;
+}
+#contact::before{
+    content: '';
+    background: url("contact.jpg") no-repeat center center;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    background-size: 100% 100%;
+    
+    height: 100%;
+    opacity: .6;
+    width: 100%;
+    /* z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 1; */
+}
+#contactbox {
+    display: flex;
+    z-index: 2;
+    width: 90vw;
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    /* background: white; */
+}
+
+#contactbox form{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    z-index: 2;
+}
+
+#contactbox label{
+    font-size: 1.3rem;
+    z-index: 2;    
+}
+
+.form-group{
+    margin: 10px;
+}
+
+#contactbox input,textarea{
+    width: 80vw;
+    padding: 0.5rem;
+    border-radius: 10px;
+    /* position: absolute; */
+    z-index: 2;
+    font-size: 1.2rem;
+}
+
+/* Utility Classes */
+
+.heading-p{
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    width: 90vw;
+    padding: 20px;
+    margin-top: 130px;
+    z-index: 2;
+    color: black;
+    text-align: center;
+}
+
+.heading-q{
+    font-size: 2.8rem;
+    /* padding: 15px; */
+    color: black;
+    text-align: center;
+}
+
+.heading-q1{
+    font-size: 2.3rem;
+    /* padding: 15px; */
+    color: black;
+    text-align: center;
+}
+
+.heading-r{
+    font-size: 2.8rem;
+    padding: 15px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    text-align: center;
+    z-index: 2;
+}
+
+.heading-s{
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    width: 90vw;
+    padding: 20px;
+    /* margin-top: 130px; */
+    /* margin-top: 130px; */
+    color: black;
+    text-align: center;
+    z-index: 3;
+    opacity: 1;
+}
+
+.center{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.para{
+    color: black;
+    margin: 5px;
+    width: 90vw;
+    text-align: center;
+    z-index: 2;
+    font-size: 1.3rem;
+}
+
+.btn{
+    padding-top: 10px;
+    z-index: 2;
+    padding-bottom: 10px;
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 15px;
+    width: 150px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(32, 1, 1);
+}
+
+.para-1{
+    text-align: center;
+    padding: 15px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
